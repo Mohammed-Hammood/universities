@@ -48,22 +48,16 @@ export const UPDATE_CARD = (data=null)=> {
         payload:data
     }
 }
-
-export const UPDATE_FLAG = ()=> {
+export const UPDATE_START_PERIOD = (startPeriod=null)=> {
     return {
-        type:'flag/update',
+        type:'startPeriod/update',
+        payload:startPeriod
     }
 }
-export const UPDATE_FROM = (from=null)=> {
+export const UPDATE_END_PERIOD= (endPeriod=null)=> {
     return {
-        type:'from/update',
-        payload:from
-    }
-}
-export const UPDATE_TO = (to=null)=> {
-    return {
-        type:'to/update',
-        payload:to
+        type:'endPeriod/update',
+        payload:endPeriod
     }
 }
 

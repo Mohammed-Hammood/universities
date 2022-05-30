@@ -5,8 +5,8 @@ import { SHOW_MODAL, UPDATE_CARDS, UPDATE_ERRORS, UPDATE_RECEIPTS, UPDATE_TRANSA
 const axios = require('axios');
 
 export default function useFetch(props) {
-    const fromState  = useSelector(state => state.from);
-    const toState = useSelector(state => state.to); 
+    const startPeriodState  = useSelector(state => state.startPeriod);
+    const endPeriodState = useSelector(state => state.endPeriod); 
     const card = useSelector(state => state.card);
     const flag = useSelector(state => state.flag);
     const cards = useSelector(state => state.cards);
@@ -20,11 +20,11 @@ export default function useFetch(props) {
             let url = `https://bonus-test.evoapp.ru/api/3rdparty/${props.name}`;
             
             if(props.name === 'transaction' || props.name === 'receipt'){
-                const to = toState?'&to=' + toState:'';
-                const from = fromState?'from=' + fromState:'';
-                const card_uuid = card.uuid?`&card_uuid=${card.uuid}`:'';
-                const questionMark = (to || from || card_uuid)?'?':'';
-                url = `https://bonus-test.evoapp.ru/api/3rdparty/${props.name}${questionMark}${from}${to}${card_uuid}`;
+                const startPeriod = startPeriodState?'from=' + startPeriodState:'';
+                const endPeriod = endPeriodState?'&to=' + endPeriodState:'';
+                const card_uuid = card.uuid?((props.name==='receipt')?`&cardUuid=${card.uuid}`:`&card_uuid=${card.uuid}`):'';
+                const questionMark = (startPeriod || endPeriod || card_uuid)?'?':'';
+                url = `https://bonus-test.evoapp.ru/api/3rdparty/${props.name}${questionMark}${startPeriod}${endPeriod}${card_uuid}`;
             }
             
             axios(url, config)
@@ -65,7 +65,7 @@ export default function useFetch(props) {
             setLoading(true);
             fetchData(true);
         }
-    }, [flag, props.name, cards, fromState, toState, dispatch, card]);
+    }, [flag, props.name, cards, startPeriodState, endPeriodState, dispatch, card]);
     
   return { loading }
 }

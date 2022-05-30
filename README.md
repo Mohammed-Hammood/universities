@@ -28,5 +28,4 @@
 
 <img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image7.png' style='width:100%; max-width:900px' />
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image8.png' style='width:100%; max-width:900px' />
 

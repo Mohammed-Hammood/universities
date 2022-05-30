@@ -61,16 +61,45 @@ window.onload = ()=> {
         updateMode(localStorage.getItem('darkMode'));
     }
 }
-export const getFullDate = (date_) => {
+export const getFullDate = ({timestamp, type='created_at'}) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'Decemberry'];
-    const date = new Date(parseInt(date_));
-    // const minutes = date.getMinutes();
-    // const hours = date.getHours();
+    // const date = (type='created_at')?new Date(parseInt(timestamp * 1000)):new Date() - new Date(parseInt(timestamp * 1000));
+    const date = new Date(parseInt(timestamp * 1000));
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
     const day = date.getDate();
     const month = date.getMonth();
     const year = date.getFullYear();
     const DISPLAY = (item)=> {return ((item < 10)?("0" + item.toString()): item.toString());  }
-    return  months[month] + ' '+  DISPLAY(day).toString() + ', ' + year.toString(); //  + ' at '+ DISPLAY(hours) + ':' + DISPLAY(minutes);
+    return  months[month] + ' '+  DISPLAY(day).toString() + ', ' + year.toString() + ' at '+ DISPLAY(hours) + ':' + DISPLAY(minutes);
 }
+const endPeriodName = 'periods-to-value-lms';
+const startPeriodName = 'periods-from-value-lms';
 
+export const setLocalStorage = ({key, value})=> {
+    
+    if(key==='to')localStorage.setItem(endPeriodName, value);
+    else if(key === 'from'){
+        localStorage.setItem(startPeriodName, value);
+    }else if(key === 'reset'){
+        localStorage.removeItem(startPeriodName);
+        localStorage.removeItem(endPeriodName);
+    }
+}
+export const getLocalStorage = ({key})=> {
+    if(key==='start'){
+        if(localStorage.getItem(startPeriodName)){
+            const startPeriod = localStorage.getItem(startPeriodName);
+            return startPeriod;
+        }
+        return false;
+    }
+    else if(key==='end'){
+        if(localStorage.getItem(startPeriodName)){
+            const endPeriod = localStorage.getItem(endPeriodName);
+            return endPeriod;
+        }
+        return false;
+    }
+}
 window.addEventListener('scroll', ()=> handleScrollAction(true))

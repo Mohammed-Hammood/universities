@@ -60,26 +60,18 @@ const errorsReducer = (state = {state:false, status:200, message:null}, action)=
     }
 }
 
-const fromReducer = (state = '0', action)=> {
+const startPeriodReducer = (state = '', action)=> {
     switch(action.type){
-        case 'from/update':
+        case 'startPeriod/update':
             return action.payload;
         default:
             return state;
     }
 }
-const toReducer = (state = '10000000000', action)=> {
+const endPeriodReducer = (state = '', action)=> {
     switch(action.type){
-        case 'to/update':
+        case 'endPeriod/update':
             return action.payload;
-        default:
-            return state;
-    }
-}
-const flagReducer = (state = false, action)=> {
-    switch(action.type){
-        case 'flag/update':
-            return !state;
         default:
             return state;
     }
@@ -108,9 +100,8 @@ const Reducers = combineReducers({
     transactions:transactionsReducer,
     selected:selectedReducer,
     card:cardReducer,
-    flag:flagReducer,
-    to:toReducer,
-    from:fromReducer,
+    startPeriod:startPeriodReducer,
+    endPeriod:endPeriodReducer,
     pathname:pathnameReducer
 });
 

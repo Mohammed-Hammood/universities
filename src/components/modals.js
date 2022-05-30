@@ -47,7 +47,7 @@ export default function Modal() {
                                 {selectedCard.birthdate?<><div className='birthday'><span className='text'>Birthdate</span> <span className='text-value'>{selectedCard.birthdate}</span></div></>:null}
                                 {selectedCard.sales?<><div className='sales'><span className='text'>Sales</span> <span className='text-value'>{selectedCard.sales}</span></div></>:null}
                                 {selectedCard.balance?<><div className='balance'><span className='text'>Balance</span> <span className='text-value'>{selectedCard.balance}</span></div></>:null}
-                                {selectedCard.created_date?<><div className='created_date'><span className='text'>Created at</span><span className='text-value'> {getFullDate(selectedCard.created_date)}</span></div></>:null}                          
+                                {selectedCard.created_date?<><div className='created_date'><span className='text'>Created at</span><span className='text-value'> {getFullDate({timestamp:selectedCard.created_date, type:'created_at'})}</span></div></>:null}                          
                                 {selectedCard.type_uuid?<><div className='type_uuid'><span className='text'>Type uuid</span><span className='text-value'> {selectedCard.type_uuid}</span></div></>:null}
                                 {selectedCard.uuid?<><div className='card_uuid'><span className='text'>Card uuid</span><span className='text-value'> {selectedCard.uuid}</span></div></>:null}
                                 {selectedCard.account_id?<><div className='account_id'><span className='text'>Account id</span><span className='text-value'> {selectedCard.account_id}</span></div></>:null}
@@ -59,7 +59,7 @@ export default function Modal() {
                                 {selectedTransaction.delta?<><div className='delta'><span className='text'>Delta</span> <span className='text-value'>{selectedTransaction.delta}</span></div></>:null}
                                 {selectedTransaction.state?<><div className='state'><span className='text'>State</span><span className='text-value'> {selectedTransaction.state}</span></div></>:null}
                                 {selectedTransaction.comment?<><div className='comment'><span className='text'>Comment</span><span className='text-value'> {selectedTransaction.comment}</span></div></>:null}
-                                {selectedTransaction.period?<><div className='period'><span className='text'>Period</span> <span className='text-value'>{selectedTransaction.period}</span></div></>:null}
+                                {selectedTransaction.period?<><div className='period'><span className='text'>Period</span> <span className='text-value'>{getFullDate({timestamp:selectedTransaction.period, type:'period'})}</span></div></>:null}
                                 {selectedTransaction.period_active?<><div className='period_active'><span className='text'>Period active</span> <span className='text-value'>{selectedTransaction.period_active}</span></div></>:null}
                                 {selectedTransaction.account_id?<><div className='account_id'><span className='text'>Account id</span><span className='text-value'> {selectedTransaction.account_id}</span></div></>:null}
                                 {selectedTransaction.uuid?<><div className='uuid'><span className='text'>Transaction Uuid</span><span className='text-value'>{selectedTransaction.uuid}</span></div></>:null}
@@ -75,7 +75,7 @@ export default function Modal() {
                                 {selectedReceipt.bonus?<><div className='bonus'><span className='text'>Bonus</span> <span className='text-value'>{selectedReceipt.bonus}</span></div></>:null}
                                 {selectedReceipt.payment?<><div className='payment'><span className='text'>Payment</span> <span className='text-value'>{selectedReceipt.payment}</span></div></>:null}
                                 {selectedReceipt.type?<><div className='card_uuid'><span className='text'>Type</span> <span className='text-value'>{selectedReceipt.type}</span></div></>:null}
-                                {selectedReceipt.period?<><div className='period'><span className='text'>Period</span> <span className='text-value'>{selectedReceipt.period}</span></div></>:null}
+                                {selectedReceipt.period?<><div className='period'><span className='text'>Period</span> <span className='text-value'>{getFullDate({timestamp:selectedReceipt.period, type:'period'})}</span></div></>:null}
                                 {selectedReceipt.total?<><div className='total'><span className='text'>Total</span> <span className='text-value'>{selectedReceipt.total}</span></div></>:null}
                                 {selectedReceipt.totalWithDiscount?<><div className='totalWithDiscount'><span className='text'>Total with discount</span> <span className='text-value'>{selectedReceipt.totalWithDiscount}</span></div></>:null}
                                 {selectedReceipt.uuid?<><div className='uuid'><span className='text'>Receipt uuid</span><span className='text-value'>{selectedReceipt.uuid}</span></div></>:null}
