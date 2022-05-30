@@ -1,0 +1,38 @@
+@import 'functions&variables.scss';
+
+.transactions-page-container, .cards-page-container, .receipts-page-container {
+    margin-top:50px;
+    font-size:15px;
+    
+    .cards-container, .transactions-container, .receipts-container {
+        max-width: $maxWidth;
+        width:100%;
+        @include CENTER_H;
+        flex-direction:column;
+        padding:10px;
+        gap:10px;
+        .card:hover, .transaction:hover, .receipt:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+        .card, .transaction, .receipt {
+            padding:10px;
+            border:1px solid lightgray;
+            border-radius:8px;
+            font-size:14px;
+            line-height:20px;
+            .detail {
+                cursor:pointer;
+                color:$specialColor3;
+            }
+        }
+    }
+}
+
+
+.dark .cards-container .card, .dark .receipts-container, .dark .transactions-container {
+      .card:hover, .receipt:hover, .transaction:hover {
+        box-shadow: 0 0 10px white;
+        background:rgb(216, 216, 216);
+    }
+}
+  
