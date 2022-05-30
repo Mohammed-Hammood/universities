@@ -3,7 +3,8 @@
 - technologies used Sass, Js, HTML
 - Libraries used: React router, Axios, Sass, Redux
 - The app uses API from 'https://app.swaggerhub.com/apis-docs/soft-c/EvotorBonus/'
-- 
+- Responsive design
+
 # To run the app locally:
 - Clone the repository to your machine
 - Install dependances
@@ -24,3 +25,8 @@
 <img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image5.png' style='width:100%; max-width:900px' />
 
 <img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image6.png' style='width:100%; max-width:900px' />
+
+<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image7.png' style='width:100%; max-width:900px' />
+
+<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image8.png' style='width:100%; max-width:900px' />
+
