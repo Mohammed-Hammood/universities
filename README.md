@@ -1,6 +1,6 @@
 ## ` React app: loyalty management system`. 
-- app created by using react-react-app
-- technologies used Sass, Js, HTML
+- App created by using create-react-app
+- Technologies used Sass, Js, HTML
 - Libraries used: React router, Axios, Sass, Redux
 - The app uses API from 'https://app.swaggerhub.com/apis-docs/soft-c/EvotorBonus/'
 - Responsive design
