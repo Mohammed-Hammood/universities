@@ -1,14 +1,12 @@
 import { Modal, ICON, Button } from "@/components";
-import { FiltersContext, ThemeContext } from "@/context";
+import {  ThemeContext } from "@/context";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 
 export const Header = (): JSX.Element => {
     const { theme, themeToggle } = useContext(ThemeContext);
-    const { filters, setFilters } = useContext(FiltersContext);
     const [searchModal, setSearchModal] = useState<boolean>(false);
-    const { order } = filters;
 
     return (
         <>
