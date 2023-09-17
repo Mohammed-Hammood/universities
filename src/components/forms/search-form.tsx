@@ -1,11 +1,11 @@
 import { Button } from "@/components";
-import { useContext, useState } from "react";
+import {  useState } from "react";
 
 type Props = {
     close: () => void;
 }
 
-const SearchForm = ({ close }: Props) => {
+const SearchForm = ({}: Props) => {
     const [query, setQuery] = useState<string>("");
     const [result, setResult] = useState<University[]>([]);
 
@@ -13,7 +13,7 @@ const SearchForm = ({ close }: Props) => {
     const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        const includes = (text: string): boolean => text.toLowerCase().includes(query.toLowerCase());
+        // const includes = (text: string): boolean => text.toLowerCase().includes(query.toLowerCase());
 
         // const result = .filter(item => includes(item.name) || includes(item.description));
 

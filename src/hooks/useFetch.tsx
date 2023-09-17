@@ -9,7 +9,7 @@ export const useFetch = () => {
     const { limit, skip, query, country } = filters;
 
     useEffect(() => {
-        const url = `https://mohammed-api.vercel.app/api/universities/?limit=${limit}&query=${query}&skip=${skip}&country=${"United States"}`;
+        const url = `https://mohammed-api.vercel.app/api/universities/?limit=${limit}&query=${query}&skip=${skip}&country=${country}`;
 
         const getData = async (): Promise<void> => {
             const req = await fetch(url, {
