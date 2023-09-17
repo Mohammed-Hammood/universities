@@ -19,10 +19,6 @@ export const Header = (): JSX.Element => {
                             <ICON name='house-solid' color='white' />
                         </Link>
 
-                        <Button shape={"transparent"} title="Order" onClick={() => setFilters({...filters, order: order === 'id' ? "-id" : "id"})}>
-                            <ICON name={order === 'id' ? "sort-up-solid" : "sort-down-solid"} color='white' />
-                        </Button>
-
                     </div>
                     <div className="navbar-group">
                         <Button

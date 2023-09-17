@@ -3,15 +3,17 @@ import { useContext, useEffect, useState } from "react"
 
 
 export const useFetch = () => {
-    const { setUniversities, universities } = useContext(UinversityContext);
+    const { setUniversities, universities, setTotal } = useContext(UinversityContext);
     const { filters } = useContext(FiltersContext);
     const [loading, setLoading] = useState<boolean>(universities.length === 0);
-    const { limit, skip, query, country } = filters;
 
     useEffect(() => {
+        const { limit, skip, query, country } = filters;
         const url = `https://mohammed-api.vercel.app/api/universities/?limit=${limit}&query=${query}&skip=${skip}&country=${country}`;
 
+
         const getData = async (): Promise<void> => {
+            setLoading(true);
             const req = await fetch(url, {
                 headers: {
                     'Content-Type': 'application/json'
@@ -19,14 +21,16 @@ export const useFetch = () => {
             });
             const res = await req.json();
 
-            setUniversities(res.data);
+            setUniversities([...universities, ...res.data]);
 
+            setTotal(res.total);
+            
             setLoading(false);
         }
 
         getData();
 
-    }, []);
+    }, [filters]);
 
 
     return {

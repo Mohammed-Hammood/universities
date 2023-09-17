@@ -23,6 +23,8 @@ type UniversityContextProps = {
     setUniversities: (value: University[]) => void;
     activeUniversity: University | null;
     setActiveUniversity: (value: University) => void;
+    total:number;
+    setTotal:(value:number)=> void;
 }
 type ThemeContextProps = {
     theme: "dark" | "light";
