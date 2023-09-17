@@ -1,31 +1,53 @@
-@import 'functions&variables.scss';
+header[class=navbar-header] {
+    position: fixed;
+    width: 100%;
+    height: 3.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
 
-header {
-    width:100%;
-    height:50px;
-    background:rgba(0, 0, 0, 0.8);
-    top:0;
-    position:fixed;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:0 25px;
-    z-index: 10;
-    svg {
-        width:15px;
-    }
-    a {
-        padding:0 10px;
-        text-decoration: none;
-        color: white;
-        font-size: 15px;
-        line-height:50px;
-    }
-    a:hover {
-        box-shadow:0 0 10px white;
-    }
-    .active {
-        box-shadow:0 0 5px white;
-        background:$specialColor3;
+    nav {
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color, #373737);
+        justify-content: space-between;
+        display: flex;
+        padding: 0 10px;
+
+        .navbar-group {
+            display: flex;
+            color: white;
+            align-items: center;
+            gap: 5px;
+
+            a,
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 4px 10px;
+                border-radius: 4px;
+
+                &:hover {
+                    box-shadow: 0 0 3px var(--base-white, #fff);
+                }
+
+                &#light-mode-btn,
+                &#dark-mode-btn {
+                    width: 60px;
+                    justify-content: flex-start;
+                    border: 1px solid var(--border-color, #bababa);
+                    border-radius: 15px;
+                    height: 23px;
+                }
+
+                &#dark-mode-btn {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
     }
 }

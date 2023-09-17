@@ -1,0 +1,16 @@
+html {
+    --base-white: #ffff;
+    --base-black: #000;
+    --border-color: #bababa;
+    --bg-color: #fff;
+    --font-color: #000;
+    --main-color: lightseagreen;
+    --main-color1: lightseagreen;
+    --main-color2: #09938b;
+    --main-color3: #09938b;
+}
+
+[data-theme="dark"] {
+    --bg-color: #4d4d4d;
+    --font-color: #fff;
+}

@@ -1,0 +1,30 @@
+main[class=home-page] {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+
+    .center-content {
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .card {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            line-height: 20px;
+
+            &:hover {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .detail {
+                cursor: pointer;
+                color: var(--main-color3);
+            }
+        }
+    }
+}

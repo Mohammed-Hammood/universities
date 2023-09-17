@@ -1,31 +1,27 @@
-## ` React app: loyalty management system`. 
-- App created by using create-react-app
-- Technologies used Sass, Js, HTML
-- Libraries used: React router, Axios, Sass, Redux
-- The app uses API from 'https://app.swaggerhub.com/apis-docs/soft-c/EvotorBonus/'
-- Responsive design
+# React + TypeScript + Vite
 
-# To run the app locally:
-- Clone the repository to your machine
-- Install dependances
-- Run build
-- Run start
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-#The app looks like this:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image1.png' style='width:100%; max-width:900px' />
+## Expanding the ESLint configuration
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image2.png' style='width:100%; max-width:900px' />
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image3.png' style='width:100%; max-width:900px' />
+- Configure the top-level `parserOptions` property like this:
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image4.png' style='width:100%; max-width:900px' />
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image5.png' style='width:100%; max-width:900px' />
-
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image6.png' style='width:100%; max-width:900px' />
-
-<img src='https://raw.githubusercontent.com/alamiriMd/loyalty-management-system/main/images/image7.png' style='width:100%; max-width:900px' />
-
-
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

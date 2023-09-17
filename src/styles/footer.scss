@@ -1,0 +1,9 @@
+footer[class=footer] {
+    width:100%;
+    padding:1rem;
+    font-size: large;
+    color: var(--base-white, white);
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+}

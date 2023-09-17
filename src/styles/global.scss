@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    padding:0;
+    margin:0;
+    color:inherit;
+    transition: all 0.2s linear;
+}
+
+main {
+    margin-top: 3.3rem;
+    height: 100%;
+    min-height: 100vmin;
+}
+
+html, body {
+    min-height: 100vmin;
+    background: var(--bg-color);
+    color: var(--font-color);
+    font-family: 'times new roman', 'Courier New', Courier, monospace;
+}
+ 
+
+.icon {
+    width: 1rem;
+    height: 1rem;
+}
