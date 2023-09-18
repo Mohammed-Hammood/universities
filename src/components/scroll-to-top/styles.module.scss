@@ -1,0 +1,72 @@
+.button {
+    --size: 3rem;
+    position: fixed;
+    right: 50px;
+    z-index: 10;
+    width: var(--size);
+    height: var(--size);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    user-select: none;
+    background: var(--base-white);
+    bottom: 30px;
+    padding: .6rem;
+    opacity: 0.2;
+    display: none;
+    animation: BOX_SHADOW 2s ease-in infinite;
+    cursor: pointer;
+
+    svg {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+    }
+
+    &:hover {
+        opacity: 1;
+        animation: HOVER 1s linear 1;
+    }
+    &:active {
+        transform: scale(1.2);
+        background: var(--main-color);
+    }
+}
+
+.isVisible {
+    display: flex;
+}
+
+.flyToTop {
+    animation: Fly .5s linear 1;
+}
+
+@keyframes BOX_SHADOW {
+    0% {
+        box-shadow: 0 0 0 1px var(--base-white);
+    }
+
+    100% {
+        box-shadow: 0 0 0 30px var(--main-color);
+    }
+}
+
+@keyframes HOVER {
+    0% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes Fly {
+    0% {
+        bottom: 30px;
+    }
+
+    100% {
+        bottom: 1500px;
+    }
+}

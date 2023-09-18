@@ -7,25 +7,57 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: inherit;
-    padding:0;
-    margin:0;
-    color:inherit;
+    padding: 0;
+    margin: 0;
+    color: inherit;
     transition: all 0.2s linear;
+    line-height: 1.5;
+    scrollbar-color: var(--main-color) var(--bg-color);
+    scrollbar-width: thin;
+}
+
+:root {
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 main {
     margin-top: 3.3rem;
     height: 100%;
-    min-height: 100vmin;
+    min-height: calc(100vmin - 3.4rem);
 }
 
-html, body {
+html,
+body {
+    color-scheme: light dark;
     min-height: 100vmin;
     background: var(--bg-color);
+    scroll-behavior: smooth;
     color: var(--font-color);
-    font-family: 'times new roman', 'Courier New', Courier, monospace;
+    font-family: 'times new roman', 'Courier New', Courier, monospace, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
- 
+
+button,
+input,
+textarea {
+    outline: 1px solid var(--border-color);
+    user-select: none;
+    border-radius: 4px;
+
+    &:focus {
+        outline: 1px solid var(--main-color);
+    }
+}
+
+picture,
+img,
+svg {
+    max-width: 100%;
+}
 
 .icon {
     width: 1rem;

@@ -4,13 +4,15 @@ html {
     --border-color: #bababa;
     --bg-color: #fff;
     --font-color: #000;
-    --main-color: lightseagreen;
+    --main-color: rgb(34, 197, 189);
     --main-color1: lightseagreen;
     --main-color2: #09938b;
-    --main-color3: #09938b;
+    --main-color3: #014642;
+    --header-bg: rgb(34, 197, 189);
 }
 
 [data-theme="dark"] {
-    --bg-color: #4d4d4d;
+    --bg-color: linear-gradient(to bottom, var(--main-color), var(--main-color3));
     --font-color: #fff;
+    --header-bg: rgba(0, 6, 9, 0.4);
 }

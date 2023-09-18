@@ -1,0 +1,9 @@
+.notFound {
+    width:100%;
+    place-items: center;
+    display: flex;    
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    background: linear-gradient(to top, var(--main-color), var(--main-color3));
+}

@@ -5,3 +5,5 @@ export * from "./button";
 export * from "./forms";
 export * from "./portal";
 export * from "./controllers";
+export * from "./scroll-to-top";
+export * from "./card";

@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { FiltersContext, UinversityContext } from '@/context';
 import { useFetch } from '@/hooks/useFetch';
-import { Modal, Loader, Controllers, Button } from '@/components';
+import { Modal, Loader, Controllers, Button, Card } from '@/components';
 
 
 export default function HomePage(): JSX.Element {
@@ -17,16 +17,17 @@ export default function HomePage(): JSX.Element {
                 <div className='universitiesWrapper'>
                     {loading ?
                         <Loader size={universities.length || filters.limit} /> :
-                        <>{universities.map((item, index) => {
-                            return (
-                                <div className='card' key={index}>
-                                    <div className='card__name'><span className='text'>University </span> <span className='text-value'>{item.name}</span></div>
-                                    <div className='card__country'><span className='text'>Country</span><span className='text-value'> {item.country}</span></div>
-                                    <span onClick={() => setUniversityDetails(item)} className='detail'>More...</span>
-                                </div>
-                            )
-                        })}
-                        </>}
+
+                        universities.map(item =>
+                            <Card
+                                {...{
+                                    university: item,
+                                    key: item.id,
+                                    setUniversityDetails
+                                }}
+                            />)
+                    }
+
                 </div>
             </div>
             <div className='loadmore'>

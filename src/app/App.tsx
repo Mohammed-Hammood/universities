@@ -1,11 +1,12 @@
 import Pages from "@/pages";
-import {  Header, Footer } from "@/components";
+import {  Header, Footer, ScrollToTop } from "@/components";
 
 function App(): JSX.Element {
   return (
     <>
       <Header />
       <Pages />
+      <ScrollToTop />
       <Footer />
     </>
   );

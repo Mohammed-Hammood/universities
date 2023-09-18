@@ -1,0 +1,24 @@
+.card {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    line-height: 20px;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    
+    &:hover {
+        box-shadow: 0 0 30px 2px var(--main-color);
+    }
+  
+}
+.title {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--base-black);
+}
+  
+.detail {
+    cursor: pointer;
+    color: var(--base-white);
+    background: var(--main-color3);
+}

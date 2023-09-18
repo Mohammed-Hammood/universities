@@ -1,4 +1,4 @@
-type IconsNames = "sun-solid" | "moon-solid" | "house-solid" | "sort-down-solid" | "sort-up-solid" | "xmark-solid" | "search" | "plus-solid" | "pen-to-square-solid" | "trash-solid" | "magnifying-glass-solid";
+type IconsNames = "plane-solid" | "sun-solid" | "moon-solid" | "house-solid" | "sort-down-solid" | "sort-up-solid" | "xmark-solid" | "search" | "plus-solid" | "pen-to-square-solid" | "trash-solid" | "magnifying-glass-solid";
 
 
 type Status = "Waiting" | "Completed" | "In process";
