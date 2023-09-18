@@ -1,5 +1,5 @@
 export * from './modal';
-export * from "./shared";
+export * from "./icons";
 export * from './layout';
 export * from "./button";
 export * from "./forms";
