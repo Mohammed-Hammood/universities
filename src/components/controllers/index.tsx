@@ -12,7 +12,7 @@ export const Controllers = (): JSX.Element => {
 
     const set = (key: "order" | "limit" | "country", value: string | number): void => {
         setUniversities([]);
-        setFilters({ ...filters, [key]: value })
+        setFilters({ ...filters, [key]: value, skip:0 })
     }
 
     return (

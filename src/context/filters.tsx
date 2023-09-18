@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 const initialFilters: Filters = {
     order: "id",
-    limit: 10,
+    limit: 20,
     skip: 0,
     query: "",
     country: "all",
