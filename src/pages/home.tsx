@@ -9,6 +9,9 @@ export default function HomePage(): JSX.Element {
     const { universities, total } = useContext(UinversityContext);
     const { filters, setFilters } = useContext(FiltersContext);
     const { loading } = useFetch();
+    const {order} = filters;
+    
+    const queryset = universities.sort((a, b) => order ==='id' ? a.id - b.id : b.id - a.id)
 
     return (
         <main className="home-page">
@@ -18,7 +21,7 @@ export default function HomePage(): JSX.Element {
                     {loading ?
                         <Loader size={universities.length || filters.limit} /> :
 
-                        universities.map(item =>
+                        queryset.map(item =>
                             <Card
                                 {...{
                                     university: item,
