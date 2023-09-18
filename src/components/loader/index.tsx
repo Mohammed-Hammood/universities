@@ -6,9 +6,9 @@ export const Loader = ({ size }: { size: number }) => {
 
     return (
         <div className={styles.loader}>
-            {cards.map((item) => <div className='loader__card' key={item}>
-                <div className="loader__card__title"></div>
-                <div className="loader__card__details"></div>
+            {cards.map((item) => <div className={styles.card} key={item}>
+                <div className={styles.title}></div>
+                <div className={styles.details}></div>
             </div>)}
         </div>
     )
