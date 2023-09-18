@@ -9,10 +9,12 @@ html {
     --main-color2: #09938b;
     --main-color3: #014642;
     --header-bg: rgb(34, 197, 189);
+    --controllers-bg: var(--main-color);
 }
 
 [data-theme="dark"] {
     --bg-color: linear-gradient(to bottom, var(--main-color), var(--main-color3));
     --font-color: #fff;
     --header-bg: rgba(0, 6, 9, 0.4);
+    --controllers-bg: var(--main-color3);
 }

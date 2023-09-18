@@ -37,6 +37,7 @@ body {
     min-height: 100vmin;
     background: var(--bg-color);
     scroll-behavior: smooth;
+    background-attachment: fixed;
     color: var(--font-color);
     font-family: 'times new roman', 'Courier New', Courier, monospace, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
