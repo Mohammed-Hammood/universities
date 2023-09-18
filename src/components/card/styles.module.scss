@@ -1,10 +1,10 @@
 .card {
     padding: 10px;
-    border: 1px solid var(--border-color);
     border-radius: 8px;
     line-height: 20px;
     width: 100%;
     border: 1px solid var(--main-color);
+    min-height: 100px;
     
     &:hover {
         box-shadow: 0 0 30px 2px var(--main-color);
